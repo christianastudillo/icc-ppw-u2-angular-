@@ -1,15 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-    --color-brand: #0f4c81;
-    --color-brand-strong: #0b3a66;
-    --color-surface: #ffffff;
-    --breakpoint-xs: 30rem;
-    --breakpoint-3xl: 120rem;
+  --color-brand: #0f4c81;
+  --color-brand-strong: #0b3a66;
 }
 
 @layer base {
-    body {
-        @apply bg-slate-100 text-slate-900 antialiased;
-    }
+  body {
+    @apply bg-slate-100 text-slate-900 antialiased;
+  }
+}
+
+/* Botón reutilizable */
+.btn-primary {
+  @apply rounded-md bg-brand px-5 py-2.5 font-medium text-white shadow-md transition-colors duration-200 hover:bg-brand-strong cursor-pointer;
 }
