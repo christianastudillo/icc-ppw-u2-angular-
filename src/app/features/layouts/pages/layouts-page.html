@@ -3,9 +3,8 @@
 -->
 <section class="space-y-10">
 
-  <!-- Encabezado de la página -->
+  <!-- Encabezado -->
   <header class="space-y-3">
-
     <p class="text-sm font-semibold uppercase tracking-[0.3em] text-sky-700">
       Layouts
     </p>
@@ -16,16 +15,11 @@
 
     <p class="max-w-2xl leading-7 text-slate-600">
       Cada sección muestra una distribución diferente: grid de columnas,
-      grid con sidebar y distribuciones flex. Los cards ilustran cómo cambia
-      la composición y aplican efectos distintos en cada caso.
+      grid con sidebar y distribuciones flex.
     </p>
-
   </header>
 
-  <!-- ===================================================== -->
-  <!-- GRID DE 4 COLUMNAS -->
-  <!-- ===================================================== -->
-
+  <!-- GRID 4 COLUMNAS -->
   <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
 
     <h2 class="mb-1 text-xl font-semibold text-slate-900">
@@ -33,7 +27,7 @@
     </h2>
 
     <p class="mb-5 text-sm text-slate-500">
-      1 col en móvil → 2 en sm → 4 en lg. Cards con gradiente y sombra.
+      1 col en móvil → 2 en sm → 4 en lg.
     </p>
 
     <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -76,7 +70,7 @@
         </h3>
 
         <p class="mt-2 text-sm leading-6 opacity-90">
-          Métrica financiera con lectura inmediata.
+          Métrica financiera.
         </p>
       </article>
 
@@ -97,10 +91,7 @@
     </div>
   </article>
 
-  <!-- ===================================================== -->
-  <!-- GRID CON SIDEBAR -->
-  <!-- ===================================================== -->
-
+  <!-- GRID SIDEBAR -->
   <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
 
     <h2 class="mb-1 text-xl font-semibold text-slate-900">
@@ -108,13 +99,12 @@
     </h2>
 
     <p class="mb-5 text-sm text-slate-500">
-      Columna fija de 240px + área principal flexible. Solo sombra, sin gradiente.
+      Sidebar fijo + contenido flexible.
     </p>
 
     <div class="grid gap-4 lg:grid-cols-[240px_minmax(0,1fr)]">
 
-      <aside class="rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-md">
-
+      <aside class="rounded-2xl bg-slate-50 border border-slate-200 p-5 shadow-md">
         <p class="text-xs font-semibold uppercase tracking-[0.25em] text-sky-700">
           Sidebar
         </p>
@@ -124,13 +114,11 @@
         </h3>
 
         <p class="mt-2 text-sm leading-6 text-slate-600">
-          Agrupa accesos a secciones internas sin competir con el contenido.
+          Accesos rápidos del sistema.
         </p>
-
       </aside>
 
-      <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-md">
-
+      <div class="rounded-2xl bg-slate-50 border border-slate-200 p-5 shadow-md">
         <p class="text-xs font-semibold uppercase tracking-[0.25em] text-sky-700">
           Contenido
         </p>
@@ -140,19 +128,14 @@
         </h3>
 
         <p class="mt-2 text-sm leading-6 text-slate-600">
-          Ocupa el espacio disponible con títulos, métricas y acciones prioritarias.
+          Información principal del dashboard.
         </p>
-
       </div>
 
     </div>
-
   </article>
 
-  <!-- ===================================================== -->
-  <!-- GRID DE 3 COLUMNAS -->
-  <!-- ===================================================== -->
-
+  <!-- GRID 3 COLUMNAS -->
   <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
 
     <h2 class="mb-1 text-xl font-semibold text-slate-900">
@@ -160,330 +143,78 @@
     </h2>
 
     <p class="mb-5 text-sm text-slate-500">
-      Distribución simétrica. Cards con solo gradiente, sin sombra.
+      Distribución simétrica con gradientes.
     </p>
 
     <div class="grid gap-6 md:grid-cols-3">
 
       <article class="rounded-2xl bg-linear-to-tr from-amber-400 to-orange-500 p-5 text-white">
-
-        <p class="text-xs font-semibold uppercase tracking-[0.25em] opacity-80">
-          Sección A
-        </p>
-
-        <h3 class="mt-2 text-lg font-semibold">
-          Primero
-        </h3>
-
-        <p class="mt-2 text-sm leading-6 opacity-90">
-          Contenido de la primera columna.
-        </p>
-
+        <h3 class="text-lg font-semibold">Primero</h3>
       </article>
 
       <article class="rounded-2xl bg-linear-to-tr from-cyan-400 to-sky-600 p-5 text-white">
-
-        <p class="text-xs font-semibold uppercase tracking-[0.25em] opacity-80">
-          Sección B
-        </p>
-
-        <h3 class="mt-2 text-lg font-semibold">
-          Segundo
-        </h3>
-
-        <p class="mt-2 text-sm leading-6 opacity-90">
-          Contenido de la segunda columna.
-        </p>
-
+        <h3 class="text-lg font-semibold">Segundo</h3>
       </article>
 
       <article class="rounded-2xl bg-linear-to-tr from-fuchsia-400 to-pink-600 p-5 text-white">
-
-        <p class="text-xs font-semibold uppercase tracking-[0.25em] opacity-80">
-          Sección C
-        </p>
-
-        <h3 class="mt-2 text-lg font-semibold">
-          Tercero
-        </h3>
-
-        <p class="mt-2 text-sm leading-6 opacity-90">
-          Contenido de la tercera columna.
-        </p>
-
+        <h3 class="text-lg font-semibold">Tercero</h3>
       </article>
 
     </div>
-
   </article>
 
-  <!-- ===================================================== -->
   <!-- FLEX CARRUSEL -->
-  <!-- ===================================================== -->
-
   <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
 
     <h2 class="mb-1 text-xl font-semibold text-slate-900">
       Flex: carrusel horizontal
     </h2>
 
-    <p class="mb-5 text-sm text-slate-500">
-      Los cards se desplazan lateralmente en pantallas pequeñas.
-    </p>
-
     <div class="flex gap-4 overflow-x-auto pb-2">
 
       <article class="min-w-[16rem] shrink-0 rounded-2xl bg-linear-to-br from-sky-400 to-blue-600 p-5 shadow-md text-white">
-
-        <p class="text-xs font-semibold uppercase tracking-[0.25em] opacity-80">
-          Flex A
-        </p>
-
-        <h3 class="mt-2 text-lg font-semibold">
-          Primer elemento
-        </h3>
-
-        <p class="mt-2 text-sm leading-6 opacity-90">
-          Se desplaza sin romper el layout.
-        </p>
-
+        <h3 class="text-lg font-semibold">Elemento 1</h3>
       </article>
 
       <article class="min-w-[16rem] shrink-0 rounded-2xl bg-linear-to-br from-violet-500 to-purple-700 p-5 shadow-md text-white">
-
-        <p class="text-xs font-semibold uppercase tracking-[0.25em] opacity-80">
-          Flex B
-        </p>
-
-        <h3 class="mt-2 text-lg font-semibold">
-          Segundo elemento
-        </h3>
-
-        <p class="mt-2 text-sm leading-6 opacity-90">
-          Estable y usable en móviles.
-        </p>
-
+        <h3 class="text-lg font-semibold">Elemento 2</h3>
       </article>
 
       <article class="min-w-[16rem] shrink-0 rounded-2xl bg-linear-to-br from-emerald-400 to-teal-600 p-5 shadow-md text-white">
-
-        <p class="text-xs font-semibold uppercase tracking-[0.25em] opacity-80">
-          Flex C
-        </p>
-
-        <h3 class="mt-2 text-lg font-semibold">
-          Tercer elemento
-        </h3>
-
-        <p class="mt-2 text-sm leading-6 opacity-90">
-          Jerarquía visual consistente.
-        </p>
-
-      </article>
-
-      <article class="min-w-[16rem] shrink-0 rounded-2xl bg-linear-to-br from-rose-400 to-pink-600 p-5 shadow-md text-white">
-
-        <p class="text-xs font-semibold uppercase tracking-[0.25em] opacity-80">
-          Flex D
-        </p>
-
-        <h3 class="mt-2 text-lg font-semibold">
-          Cuarto elemento
-        </h3>
-
-        <p class="mt-2 text-sm leading-6 opacity-90">
-          Se agrega sin cambiar el layout.
-        </p>
-
+        <h3 class="text-lg font-semibold">Elemento 3</h3>
       </article>
 
     </div>
-
   </article>
 
-  <!-- ===================================================== -->
   <!-- FLEX WRAP -->
-  <!-- ===================================================== -->
-
   <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
 
     <h2 class="mb-1 text-xl font-semibold text-slate-900">
-      Flex: wrap con alineación
+      Flex wrap
     </h2>
 
-    <p class="mb-5 text-sm text-slate-500">
-      Los cards saltan de fila automáticamente. Solo sombra, sin gradiente.
-    </p>
-
-    <div class="flex flex-wrap items-start gap-4">
+    <div class="flex flex-wrap gap-4 items-start">
 
       <article class="w-56 rounded-2xl bg-white p-5 shadow-xl ring-1 ring-slate-200">
-
-        <p class="text-xs font-semibold uppercase tracking-[0.25em] text-sky-700">
-          Item 01
-        </p>
-
-        <h3 class="mt-2 text-lg font-semibold text-slate-900">
-          Card básica
+        <h3 class="text-lg font-semibold text-slate-900">
+          Card 01
         </h3>
-
-        <p class="mt-2 text-sm leading-6 text-slate-600">
-          Sombra prominente, sin gradiente.
-        </p>
-
       </article>
 
       <article class="w-56 rounded-2xl bg-white p-5 shadow-xl ring-1 ring-slate-200">
-
-        <p class="text-xs font-semibold uppercase tracking-[0.25em] text-sky-700">
-          Item 02
-        </p>
-
-        <h3 class="mt-2 text-lg font-semibold text-slate-900">
-          Card básica
+        <h3 class="text-lg font-semibold text-slate-900">
+          Card 02
         </h3>
-
-        <p class="mt-2 text-sm leading-6 text-slate-600">
-          Se reorganiza con el ancho disponible.
-        </p>
-
       </article>
 
       <article class="w-56 rounded-2xl bg-white p-5 shadow-xl ring-1 ring-slate-200">
-
-        <p class="text-xs font-semibold uppercase tracking-[0.25em] text-sky-700">
-          Item 03
-        </p>
-
-        <h3 class="mt-2 text-lg font-semibold text-slate-900">
-          Card básica
+        <h3 class="text-lg font-semibold text-slate-900">
+          Card 03
         </h3>
-
-        <p class="mt-2 text-sm leading-6 text-slate-600">
-          Jerarquía clara con solo sombra.
-        </p>
-
-      </article>
-
-      <article class="w-56 rounded-2xl bg-white p-5 shadow-xl ring-1 ring-slate-200">
-
-        <p class="text-xs font-semibold uppercase tracking-[0.25em] text-sky-700">
-          Item 04
-        </p>
-
-        <h3 class="mt-2 text-lg font-semibold text-slate-900">
-          Card básica
-        </h3>
-
-        <p class="mt-2 text-sm leading-6 text-slate-600">
-          Estructura mínima sin decoración extra.
-        </p>
-
-      </article>
-
-      <article class="w-56 rounded-2xl bg-white p-5 shadow-xl ring-1 ring-slate-200">
-
-        <p class="text-xs font-semibold uppercase tracking-[0.25em] text-sky-700">
-          Item 05
-        </p>
-
-        <h3 class="mt-2 text-lg font-semibold text-slate-900">
-          Card básica
-        </h3>
-
-        <p class="mt-2 text-sm leading-6 text-slate-600">
-          El ancho fijo define cuántos caben por fila.
-        </p>
-
       </article>
 
     </div>
-
-  </article>
-
-  <!-- ===================================================== -->
-  <!-- EXTRA 1: GRID AUTO-FIT -->
-  <!-- ===================================================== -->
-
-  <!--
-    repeat(auto-fit, minmax(220px, 1fr)):
-    crea columnas automáticas adaptables según el ancho disponible.
-  -->
-  <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-
-    <h2 class="mb-1 text-xl font-semibold text-slate-900">
-      Grid auto-fit responsive
-    </h2>
-
-    <p class="mb-5 text-sm text-slate-500">
-      Las columnas se ajustan automáticamente al tamaño de pantalla.
-    </p>
-
-    <div class="grid gap-5 grid-cols-[repeat(auto-fit,minmax(220px,1fr))]">
-
-      <article class="rounded-2xl bg-linear-to-r from-indigo-500 to-blue-600 p-5 text-white shadow-lg">
-        <h3 class="text-lg font-semibold">Dashboard</h3>
-        <p class="mt-2 text-sm opacity-90">
-          Layout adaptable sin breakpoints manuales.
-        </p>
-      </article>
-
-      <article class="rounded-2xl bg-linear-to-r from-pink-500 to-rose-500 p-5 text-white shadow-lg">
-        <h3 class="text-lg font-semibold">Analytics</h3>
-        <p class="mt-2 text-sm opacity-90">
-          Las cards se reorganizan automáticamente.
-        </p>
-      </article>
-
-      <article class="rounded-2xl bg-linear-to-r from-emerald-500 to-green-600 p-5 text-white shadow-lg">
-        <h3 class="text-lg font-semibold">Reportes</h3>
-        <p class="mt-2 text-sm opacity-90">
-          Excelente para dashboards dinámicos.
-        </p>
-      </article>
-
-    </div>
-
-  </article>
-
-  <!-- ===================================================== -->
-  <!-- EXTRA 2: FLEX COLUMN RESPONSIVE -->
-  <!-- ===================================================== -->
-
-  <!--
-    flex-col md:flex-row:
-    columna en móviles y fila en pantallas medianas.
-  -->
-  <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-
-    <h2 class="mb-1 text-xl font-semibold text-slate-900">
-      Flex responsive
-    </h2>
-
-    <p class="mb-5 text-sm text-slate-500">
-      Cambia de columna a fila según el tamaño de pantalla.
-    </p>
-
-    <div class="flex flex-col gap-4 md:flex-row">
-
-      <article class="flex-1 rounded-2xl bg-slate-900 p-6 text-white shadow-lg">
-        <h3 class="text-lg font-semibold">Mobile First</h3>
-
-        <p class="mt-2 text-sm leading-6 text-slate-300">
-          En móviles los elementos se apilan verticalmente.
-        </p>
-      </article>
-
-      <article class="flex-1 rounded-2xl bg-sky-600 p-6 text-white shadow-lg">
-        <h3 class="text-lg font-semibold">Desktop Layout</h3>
-
-        <p class="mt-2 text-sm leading-6 text-sky-100">
-          En desktop se muestran en fila automáticamente.
-        </p>
-      </article>
-
-    </div>
-
   </article>
 
 </section>
