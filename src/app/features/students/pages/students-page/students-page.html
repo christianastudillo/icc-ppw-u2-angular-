@@ -1,34 +1,35 @@
-<section class="space-y-4">
+<section class="space-y-6 max-w-3xl mx-auto">
+  <div class="space-y-1.5">
+    <h1 class="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Estudiantes Matriculados</h1>
+    <p class="text-sm text-slate-500 leading-relaxed">
+      Selecciona un registro de la nómina para auditar la ficha de información y el historial académico.
+    </p>
+  </div>
 
-  <h1 class="text-3xl font-bold tracking-tight text-slate-900">
-    Estudiantes
-  </h1>
-
-  <p class="text-slate-600">
-    Selecciona un estudiante para ver su detalle.
-  </p>
-
-  <ul class="flex flex-col gap-3 list-none p-0">
-
+  <ul class="space-y-3 list-none p-0">
     @for (student of students(); track student.id) {
-
       <li>
         <a
-          class="block px-4 py-3 bg-white border border-slate-200 rounded-lg text-brand no-underline font-medium transition hover:bg-slate-50 hover:border-brand"
           [routerLink]="['/students', student.id]"
+          class="group flex items-center justify-between px-5 py-4 bg-white border border-slate-200/80 rounded-xl shadow-xs transition-all duration-200 hover:border-brand hover:shadow-md hover:shadow-brand/5 hover:-translate-y-0.5"
         >
-          {{ student.name }}
+          <div class="flex items-center space-x-4">
+            <div class="h-9 w-9 rounded-lg bg-slate-100 text-slate-600 font-bold text-sm flex items-center justify-center group-hover:bg-brand/10 group-hover:text-brand transition-colors">
+              {{ student.name.charAt(0) }}
+            </div>
+            <span class="text-sm font-medium text-slate-700 group-hover:text-brand transition-colors">
+              {{ student.name }}
+            </span>
+          </div>
+          <span class="text-slate-400 transform translate-x-0 opacity-0 transition-all duration-200 group-hover:translate-x-1 group-hover:opacity-100 text-sm font-medium">
+            Ficha →
+          </span>
         </a>
       </li>
-
     } @empty {
-
-      <li class="italic text-slate-500">
-        No hay estudiantes disponibles.
-      </li>
-
+      <div class="flex flex-col items-center justify-center p-12 bg-white rounded-2xl border border-dashed border-slate-300 text-center">
+        <p class="text-sm italic text-slate-500 font-medium">No se registran estudiantes en la base de datos local.</p>
+      </div>
     }
-
   </ul>
-
 </section>

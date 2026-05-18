@@ -1,12 +1,10 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-layouts-page',
   standalone: true,
-  imports: [CommonModule],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './layouts-page.html',
 })
-export class LayoutsPage {
-
-}
+export class LayoutsPage {}

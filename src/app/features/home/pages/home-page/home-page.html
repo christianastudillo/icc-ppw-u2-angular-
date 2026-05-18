@@ -1,20 +1,18 @@
-<section class="space-y-8">
-
+<section class="space-y-12">
   <app-hero />
 
-  <div class="flex justify-center gap-4 py-4">
-
-    <button class="btn-primary" (click)="goToStudentsPage()">
+  <div class="flex flex-col sm:flex-row justify-center items-center gap-4 py-6 border-t border-slate-200/60 max-w-2xl mx-auto">
+    
+    <button class="btn-primary w-full sm:w-auto" (click)="goToStudentsPage()">
       Ver Estudiantes →
     </button>
 
     <button
       type="button"
-      class="w-fit rounded-md border-2 border-brand bg-transparent px-5 py-2.5 font-medium text-brand transition-colors duration-200 hover:bg-brand hover:text-white cursor-pointer"
+      (click)="goToStudentsPage()"
+      class="w-full sm:w-auto inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 shadow-xs transition-all duration-200 hover:bg-slate-50 hover:border-slate-400 hover:text-slate-900 active:scale-[0.98] cursor-pointer"
     >
-      Ver Estudiantes →
+      Explorar Listado
     </button>
-
   </div>
-
 </section>

@@ -1,219 +1,280 @@
-<!--
-  space-y-10: ritmo vertical generoso (2.5rem) entre secciones.
--->
-<section class="space-y-10">
-
-  <!-- Encabezado -->
-  <header class="space-y-3">
-    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-sky-700">
-      Layouts
-    </p>
-
-    <h1 class="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
-      Distribuciones de layout con Tailwind
+<section class="space-y-12">
+  
+  <header class="space-y-3 border-b border-slate-200 pb-6">
+    <p class="text-xs font-bold uppercase tracking-[0.3em] text-brand">Sistemas de Distribución</p>
+    <h1 class="text-3xl font-extrabold tracking-tight text-slate-950 md:text-4xl">
+      Laboratorio de Layouts & Grid Systems
     </h1>
-
-    <p class="max-w-2xl leading-7 text-slate-600">
-      Cada sección muestra una distribución diferente: grid de columnas,
-      grid con sidebar y distribuciones flex.
+    <p class="max-w-3xl text-sm leading-relaxed text-slate-500">
+      Exploración avanzada de las especificaciones de CSS Grid y Flexbox. Cada bloque evalúa cómo se comportan los contenedores, las proporciones responsive y los efectos de elevación física bajo contenido real.
     </p>
   </header>
 
-  <!-- GRID 4 COLUMNAS -->
-  <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-
-    <h2 class="mb-1 text-xl font-semibold text-slate-900">
-      Grid de 4 columnas
-    </h2>
-
-    <p class="mb-5 text-sm text-slate-500">
-      1 col en móvil → 2 en sm → 4 en lg.
-    </p>
+  <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-xs space-y-4">
+    <div>
+      <h2 class="text-lg font-bold text-slate-900">Grid Isométrico de 4 Columnas</h2>
+      <p class="text-xs text-slate-500">Distribución adaptativa: 1 col en móvil → 2 en sm → 4 en lg. Enfoque con gradiente diagonal y profundidad.</p>
+    </div>
 
     <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-
-      <article class="rounded-2xl bg-linear-to-br from-sky-400 to-blue-600 p-5 shadow-lg text-white">
-        <p class="text-xs font-semibold uppercase tracking-[0.25em] opacity-80">
-          Card 01
-        </p>
-
-        <h3 class="mt-2 text-lg font-semibold">
-          Usuarios activos
-        </h3>
-
-        <p class="mt-2 text-sm leading-6 opacity-90">
-          Indicador rápido de actividad.
-        </p>
+      <article class="rounded-xl bg-linear-to-br from-sky-500 to-blue-600 p-5 shadow-md text-white">
+        <p class="text-[10px] font-bold uppercase tracking-wider opacity-75">Métrica 01</p>
+        <h3 class="mt-1 text-base font-bold">Usuarios Activos</h3>
+        <p class="mt-2 text-xs leading-relaxed opacity-90">Monitoreo de conexiones concurrentes en los servidores de la cátedra.</p>
       </article>
 
-      <article class="rounded-2xl bg-linear-to-br from-violet-500 to-purple-700 p-5 shadow-lg text-white">
-        <p class="text-xs font-semibold uppercase tracking-[0.25em] opacity-80">
-          Card 02
-        </p>
-
-        <h3 class="mt-2 text-lg font-semibold">
-          Tareas pendientes
-        </h3>
-
-        <p class="mt-2 text-sm leading-6 opacity-90">
-          Resumen visual de trabajo.
-        </p>
+      <article class="rounded-xl bg-linear-to-br from-violet-500 to-purple-600 p-5 shadow-md text-white">
+        <p class="text-[10px] font-bold uppercase tracking-wider opacity-75">Métrica 02</p>
+        <h3 class="mt-1 text-base font-bold">Tareas Pendientes</h3>
+        <p class="mt-2 text-xs leading-relaxed opacity-90">Cola de asignaciones de programación pendientes de revisión automatizada.</p>
       </article>
 
-      <article class="rounded-2xl bg-linear-to-br from-emerald-400 to-teal-600 p-5 shadow-lg text-white">
-        <p class="text-xs font-semibold uppercase tracking-[0.25em] opacity-80">
-          Card 03
-        </p>
-
-        <h3 class="mt-2 text-lg font-semibold">
-          Ingresos
-        </h3>
-
-        <p class="mt-2 text-sm leading-6 opacity-90">
-          Métrica financiera.
-        </p>
+      <article class="rounded-xl bg-linear-to-br from-emerald-500 to-teal-600 p-5 shadow-md text-white">
+        <p class="text-[10px] font-bold uppercase tracking-wider opacity-75">Métrica 03</p>
+        <h3 class="mt-1 text-base font-bold">Tasa de Entrega</h3>
+        <p class="mt-2 text-xs leading-relaxed opacity-90">Porcentaje de éxito en las confirmaciones de repositorios vía webhooks.</p>
       </article>
 
-      <article class="rounded-2xl bg-linear-to-br from-rose-400 to-pink-600 p-5 shadow-lg text-white">
-        <p class="text-xs font-semibold uppercase tracking-[0.25em] opacity-80">
-          Card 04
-        </p>
-
-        <h3 class="mt-2 text-lg font-semibold">
-          Satisfacción
-        </h3>
-
-        <p class="mt-2 text-sm leading-6 opacity-90">
-          Seguimiento de experiencia.
-        </p>
+      <article class="rounded-xl bg-linear-to-br from-rose-500 to-pink-600 p-5 shadow-md text-white">
+        <p class="text-[10px] font-bold uppercase tracking-wider opacity-75">Métrica 04</p>
+        <h3 class="mt-1 text-base font-bold">Satisfacción</h3>
+        <p class="mt-2 text-xs leading-relaxed opacity-90">Índice de experiencia de usuario recabado en las auditorías de interfaz.</p>
       </article>
-
     </div>
   </article>
 
-  <!-- GRID SIDEBAR -->
-  <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-
-    <h2 class="mb-1 text-xl font-semibold text-slate-900">
-      Grid con sidebar
-    </h2>
-
-    <p class="mb-5 text-sm text-slate-500">
-      Sidebar fijo + contenido flexible.
-    </p>
+  <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-xs space-y-4">
+    <div>
+      <h2 class="text-lg font-bold text-slate-900">Grid con Sidebar (Patrón Administrativo)</h2>
+      <p class="text-xs text-slate-500">Columna asimétrica fija de 240px + área principal flexible usando fracciones dinámicas.</p>
+    </div>
 
     <div class="grid gap-4 lg:grid-cols-[240px_minmax(0,1fr)]">
-
-      <aside class="rounded-2xl bg-slate-50 border border-slate-200 p-5 shadow-md">
-        <p class="text-xs font-semibold uppercase tracking-[0.25em] text-sky-700">
-          Sidebar
-        </p>
-
-        <h3 class="mt-2 text-lg font-semibold text-slate-900">
-          Menú principal
-        </h3>
-
-        <p class="mt-2 text-sm leading-6 text-slate-600">
-          Accesos rápidos del sistema.
-        </p>
+      <aside class="rounded-xl bg-slate-50 border border-slate-200 p-5 shadow-xs">
+        <p class="text-[10px] font-bold uppercase tracking-wider text-brand">Navegación Lateral</p>
+        <h3 class="mt-1 text-base font-bold text-slate-900">Menú Consola</h3>
+        <p class="mt-2 text-xs leading-relaxed text-slate-500">Agrupa accesos jerárquicos a las configuraciones globales del core sin saturar el foco.</p>
       </aside>
 
-      <div class="rounded-2xl bg-slate-50 border border-slate-200 p-5 shadow-md">
-        <p class="text-xs font-semibold uppercase tracking-[0.25em] text-sky-700">
-          Contenido
-        </p>
-
-        <h3 class="mt-2 text-lg font-semibold text-slate-900">
-          Panel central
-        </h3>
-
-        <p class="mt-2 text-sm leading-6 text-slate-600">
-          Información principal del dashboard.
-        </p>
+      <div class="rounded-xl bg-slate-50 border border-slate-200 p-5 shadow-xs">
+        <p class="text-[10px] font-bold uppercase tracking-wider text-brand">Área de Trabajo</p>
+        <h3 class="mt-1 text-base font-bold text-slate-900">Viewport Principal</h3>
+        <p class="mt-2 text-xs leading-relaxed text-slate-500">Zona de despliegue principal. Ajusta el ancho automáticamente reclamando la fracción restante de la pantalla.</p>
       </div>
-
     </div>
   </article>
 
-  <!-- GRID 3 COLUMNAS -->
-  <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+  <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-xs space-y-4">
+    <div>
+      <h2 class="text-lg font-bold text-slate-900">Grid de 3 Columnas Simétrico</h2>
+      <p class="text-xs text-slate-500">Composición de tercios perfectos. Uso puro de gradientes lineales para validar contrastes planos sin sombras.</p>
+    </div>
 
-    <h2 class="mb-1 text-xl font-semibold text-slate-900">
-      Grid de 3 columnas
-    </h2>
-
-    <p class="mb-5 text-sm text-slate-500">
-      Distribución simétrica con gradientes.
-    </p>
-
-    <div class="grid gap-6 md:grid-cols-3">
-
-      <article class="rounded-2xl bg-linear-to-tr from-amber-400 to-orange-500 p-5 text-white">
-        <h3 class="text-lg font-semibold">Primero</h3>
-      </article>
-
-      <article class="rounded-2xl bg-linear-to-tr from-cyan-400 to-sky-600 p-5 text-white">
-        <h3 class="text-lg font-semibold">Segundo</h3>
-      </article>
-
-      <article class="rounded-2xl bg-linear-to-tr from-fuchsia-400 to-pink-600 p-5 text-white">
-        <h3 class="text-lg font-semibold">Tercero</h3>
-      </article>
-
+    <div class="grid gap-4 md:grid-cols-3">
+      <div class="rounded-xl bg-linear-to-tr from-amber-500 to-orange-600 p-5 text-white">
+        <h3 class="text-base font-bold">Fase Inicial</h3>
+        <p class="mt-2 text-xs leading-relaxed opacity-90">Modelado y estructuración semántica de las vistas y rutas de la aplicación Angular.</p>
+      </div>
+      <div class="rounded-xl bg-linear-to-tr from-cyan-500 to-sky-600 p-5 text-white">
+        <h3 class="text-base font-bold">Fase de Estilos</h3>
+        <p class="mt-2 text-xs leading-relaxed opacity-90">Inyección de clases de utilidad atómicas para agilizar el diseño responsive fluido.</p>
+      </div>
+      <div class="rounded-xl bg-linear-to-tr from-fuchsia-500 to-pink-600 p-5 text-white">
+        <h3 class="text-base font-bold">Fase de Despliegue</h3>
+        <p class="mt-2 text-xs leading-relaxed opacity-90">Compilación final y optimización de bundles para el servidor de producción.</p>
+      </div>
     </div>
   </article>
 
-  <!-- FLEX CARRUSEL -->
-  <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+  <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-xs space-y-4">
+    <div>
+      <h2 class="text-lg font-bold text-slate-900">Flexbox: Carrusel Desplazable Lateral</h2>
+      <p class="text-xs text-slate-500">Habilita scroll x fluido nativo en viewports reducidos impidiendo la rotura de los contenedores.</p>
+    </div>
 
-    <h2 class="mb-1 text-xl font-semibold text-slate-900">
-      Flex: carrusel horizontal
-    </h2>
-
-    <div class="flex gap-4 overflow-x-auto pb-2">
-
-      <article class="min-w-[16rem] shrink-0 rounded-2xl bg-linear-to-br from-sky-400 to-blue-600 p-5 shadow-md text-white">
-        <h3 class="text-lg font-semibold">Elemento 1</h3>
-      </article>
-
-      <article class="min-w-[16rem] shrink-0 rounded-2xl bg-linear-to-br from-violet-500 to-purple-700 p-5 shadow-md text-white">
-        <h3 class="text-lg font-semibold">Elemento 2</h3>
-      </article>
-
-      <article class="min-w-[16rem] shrink-0 rounded-2xl bg-linear-to-br from-emerald-400 to-teal-600 p-5 shadow-md text-white">
-        <h3 class="text-lg font-semibold">Elemento 3</h3>
-      </article>
-
+    <div class="flex gap-4 overflow-x-auto pb-3 custom-scrollbar">
+      <div class="min-w-[16rem] shrink-0 rounded-xl bg-slate-900 p-5 text-white shadow-xs">
+        <h4 class="font-bold text-sm">Componente 01</h4>
+        <p class="mt-2 text-xs text-slate-400">Controladores inyectables independientes.</p>
+      </div>
+      <div class="min-w-[16rem] shrink-0 rounded-xl bg-slate-900 p-5 text-white shadow-xs">
+        <h4 class="font-bold text-sm">Componente 02</h4>
+        <p class="mt-2 text-xs text-slate-400">Directivas de atributos estructurales.</p>
+      </div>
+      <div class="min-w-[16rem] shrink-0 rounded-xl bg-slate-900 p-5 text-white shadow-xs">
+        <h4 class="font-bold text-sm">Componente 03</h4>
+        <p class="mt-2 text-xs text-slate-400">Pipes personalizados para mutar texto.</p>
+      </div>
+      <div class="min-w-[16rem] shrink-0 rounded-xl bg-slate-900 p-5 text-white shadow-xs">
+        <h4 class="font-bold text-sm">Componente 04</h4>
+        <p class="mt-2 text-xs text-slate-400">Gestores de estado asíncronos distribuidos.</p>
+      </div>
     </div>
   </article>
 
-  <!-- FLEX WRAP -->
-  <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-
-    <h2 class="mb-1 text-xl font-semibold text-slate-900">
-      Flex wrap
-    </h2>
+  <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-xs space-y-4">
+    <div>
+      <h2 class="text-lg font-bold text-slate-900">Flexbox Wrap con Alineación de Origen</h2>
+      <p class="text-xs text-slate-500">Salto de línea automático basado en el ancho crítico de los elementos internos. Evita desbordamientos.</p>
+    </div>
 
     <div class="flex flex-wrap gap-4 items-start">
+      @for (item of [1,2,3,4,5]; track item) {
+        <div class="w-48 rounded-xl bg-white p-4 shadow-sm ring-1 ring-slate-200/60 hover:ring-brand transition-all duration-200">
+          <span class="text-xs font-bold text-brand">Etiqueta 0{{item}}</span>
+          <p class="mt-1 text-xs text-slate-600 leading-relaxed">Bloque modular auto-ajustable en el eje transversal.</p>
+        </div>
+      }
+    </div>
+  </article>
 
-      <article class="w-56 rounded-2xl bg-white p-5 shadow-xl ring-1 ring-slate-200">
-        <h3 class="text-lg font-semibold text-slate-900">
-          Card 01
-        </h3>
-      </article>
+  <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-xs space-y-4">
+    <div>
+      <div class="inline-flex items-center rounded-md bg-brand/10 px-2 py-0.5 text-[10px] font-bold text-brand uppercase tracking-wider mb-1">Layout Extra 1</div>
+      <h2 class="text-lg font-bold text-slate-900">Asymmetric Bento Grid System</h2>
+      <p class="text-xs text-slate-500">Composición compleja controlando la expansión coordinada de filas y columnas.</p>
+    </div>
 
-      <article class="w-56 rounded-2xl bg-white p-5 shadow-xl ring-1 ring-slate-200">
-        <h3 class="text-lg font-semibold text-slate-900">
-          Card 02
-        </h3>
-      </article>
+    <div class="grid gap-4 sm:grid-cols-1 md:grid-cols-3">
+      <div class="rounded-xl md:col-span-2 md:row-span-2 bg-linear-to-br from-brand to-brand-strong p-6 text-white shadow-md flex flex-col justify-between">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-widest opacity-75">Core Analítico</span>
+          <h3 class="mt-1 text-xl font-bold">Rendimiento Técnico del Repositorio</h3>
+          <p class="mt-3 text-xs leading-relaxed opacity-90 max-w-xl">
+            Este contenedor se expande sobre múltiples celdas del grid base. Al reclamar mayor espacio en el viewport, guía la mirada del usuario de forma inmediata hacia las analíticas críticas de la aplicación.
+          </p>
+        </div>
+        <div class="mt-6 flex items-center gap-2 text-xs text-white/80 font-mono">
+          <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span> Servidor de Producción En Línea
+        </div>
+      </div>
 
-      <article class="w-56 rounded-2xl bg-white p-5 shadow-xl ring-1 ring-slate-200">
-        <h3 class="text-lg font-semibold text-slate-900">
-          Card 03
-        </h3>
-      </article>
+      <div class="rounded-xl md:row-span-2 bg-slate-900 p-5 text-white flex flex-col justify-between border border-slate-800">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-brand">Estado de Rutas</span>
+          <h3 class="mt-1 text-base font-bold">Historial de Commits</h3>
+          <p class="mt-2 text-xs text-slate-400 leading-relaxed">Registro cronológico de compilaciones Angular 21 exitosas.</p>
+        </div>
+        <div class="space-y-2 mt-4">
+          <div class="h-1.5 w-full rounded-full bg-slate-800"><div class="h-1.5 w-4/5 rounded-full bg-brand"></div></div>
+          <div class="h-1.5 w-full rounded-full bg-slate-800"><div class="h-1.5 w-2/3 rounded-full bg-emerald-500"></div></div>
+        </div>
+      </div>
 
+      <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 shadow-2xs">
+        <h4 class="text-xs font-bold text-slate-800">Peticiones HTTP</h4>
+        <p class="text-[11px] text-slate-500 mt-0.5">Estadísticas de observadores y subscripciones RxJS.</p>
+      </div>
+
+      <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 shadow-2xs">
+        <h4 class="text-xs font-bold text-slate-800">Inyección Sutil</h4>
+        <p class="text-[11px] text-slate-500 mt-0.5">Pruebas unitarias validadas con el motor de testing.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-xs space-y-4">
+    <div>
+      <div class="inline-flex items-center rounded-md bg-brand/10 px-2 py-0.5 text-[10px] font-bold text-brand uppercase tracking-wider mb-1">Layout Extra 2</div>
+      <h2 class="text-lg font-bold text-slate-900">Fluid Auto-Fit Grid Column System</h2>
+      <p class="text-xs text-slate-500">Diseño adaptativo puro gestionado de forma matemática por el navegador en base a anchos mínimos.</p>
+    </div>
+
+    <div class="grid gap-4 grid-cols-[repeat(auto-fit,minmax(240px,1fr))]">
+      <div class="rounded-xl border-t-4 border-t-emerald-500 bg-slate-50 border border-slate-200 p-4 shadow-2xs">
+        <span class="inline-block px-2 py-0.5 rounded bg-emerald-50 text-[10px] font-bold text-emerald-700">ONLINE</span>
+        <h3 class="mt-2 text-sm font-bold text-slate-900">API de Estudiantes</h3>
+        <p class="mt-1 text-xs text-slate-500 leading-normal">Conectividad directa establecida con el gestor de base de datos relacional.</p>
+      </div>
+
+      <div class="rounded-xl border-t-4 border-t-brand bg-slate-50 border border-slate-200 p-4 shadow-2xs">
+        <span class="inline-block px-2 py-0.5 rounded bg-blue-50 text-[10px] font-bold text-brand">SYNC</span>
+        <h3 class="mt-2 text-sm font-bold text-slate-900">Motor Tailwind CSS</h3>
+        <p class="mt-1 text-xs text-slate-500 leading-normal">Compilación JIT procesando tokens personalizados e inyecciones globales.</p>
+      </div>
+
+      <div class="rounded-xl border-t-4 border-t-amber-500 bg-slate-50 border border-slate-200 p-4 shadow-2xs">
+        <span class="inline-block px-2 py-0.5 rounded bg-amber-50 text-[10px] font-bold text-amber-700">WARN</span>
+        <h3 class="mt-2 text-sm font-bold text-slate-900">Servicios RxJS</h3>
+        <p class="mt-1 text-xs text-slate-500 leading-normal">Detectados flujos de datos abiertos sin desuscripción explícita en memoria.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-xs space-y-4">
+    <div>
+      <div class="inline-flex items-center rounded-md bg-brand/10 px-2 py-0.5 text-[10px] font-bold text-brand uppercase tracking-wider mb-1">Layout Extra 3</div>
+      <h2 class="text-lg font-bold text-slate-900">Aligned Flex Pricing Rows</h2>
+      <p class="text-xs text-slate-500">Distribución por filas elásticas manteniendo simetría total en los elementos de pie de página.</p>
+    </div>
+
+    <div class="flex flex-col md:flex-row gap-4">
+      <div class="flex-1 rounded-xl border border-slate-200 bg-white p-5 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="h-8 w-8 rounded bg-slate-100 text-slate-700 flex items-center justify-center text-xs font-bold">01</div>
+          <h3 class="mt-3 text-sm font-bold text-slate-900">Módulo de Lectura Básica</h3>
+          <p class="mt-1 text-xs text-slate-500 leading-relaxed">
+            Habilita exclusivamente el consumo de endpoints públicos para visualizar las listas estáticas de estudiantes.
+          </p>
+        </div>
+        <button class="mt-5 w-full rounded-lg bg-slate-100 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-200 transition-colors cursor-pointer">
+          Vincular Entorno
+        </button>
+      </div>
+
+      <div class="flex-1 rounded-xl border-2 border-brand bg-white p-5 shadow-md flex flex-col justify-between relative">
+        <span class="absolute -top-2.5 right-4 rounded-full bg-brand px-2.5 py-0.5 text-[9px] font-bold text-white uppercase tracking-wider">Completo</span>
+        <div>
+          <div class="h-8 w-8 rounded bg-blue-50 text-brand flex items-center justify-center text-xs font-bold">02</div>
+          <h3 class="mt-3 text-sm font-bold text-slate-900">Administrador de Atributos Avanzado</h3>
+          <p class="mt-1 text-xs text-slate-500 leading-relaxed">
+            Otorga permisos de escritura en la base de datos relacional de la universidad, habilitando la mutación de formularios reactivos complejos, auditoría de tokens de seguridad y layouts asimétricos adaptativos de última generación.
+          </p>
+        </div>
+        <button class="mt-5 w-full rounded-lg bg-brand py-2 text-xs font-semibold text-white hover:bg-brand-strong transition-colors shadow-xs cursor-pointer">
+          Vincular Entorno
+        </button>
+      </div>
+    </div>
+  </article>
+
+  <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-xs space-y-4">
+    <div>
+      <div class="inline-flex items-center rounded-md bg-brand/10 px-2 py-0.5 text-[10px] font-bold text-brand uppercase tracking-wider mb-1">Layout Extra 4</div>
+      <h2 class="text-lg font-bold text-slate-900">6-Column Dense Form Grid System</h2>
+      <p class="text-xs text-slate-500">Estructuración inteligente de campos de entrada utilizando repartos proporcionales de columnas.</p>
+    </div>
+
+    <div class="grid grid-cols-6 gap-4 bg-slate-50 border border-slate-200 rounded-xl p-5 shadow-2xs">
+      <div class="col-span-6 md:col-span-3 space-y-1">
+        <label class="text-[11px] font-bold text-slate-600 uppercase tracking-wider">Nombre Completo</label>
+        <input type="text" placeholder="Ej. Christian Astudillo" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs shadow-2xs focus:border-brand focus:outline-hidden" />
+      </div>
+
+      <div class="col-span-6 md:col-span-3 space-y-1">
+        <label class="text-[11px] font-bold text-slate-600 uppercase tracking-wider">Correo Electrónico Institucional</label>
+        <input type="email" placeholder="ejemplo@ups.edu.ec" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs shadow-2xs focus:border-brand focus:outline-hidden" />
+      </div>
+
+      <div class="col-span-6 md:col-span-2 space-y-1">
+        <label class="text-[11px] font-bold text-slate-600 uppercase tracking-wider">Sede Universitaria</label>
+        <select class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs shadow-2xs focus:border-brand focus:outline-hidden">
+          <option>Cuenca</option>
+          <option>Quito</option>
+          <option>Guayaquil</option>
+        </select>
+      </div>
+
+      <div class="col-span-6 md:col-span-2 space-y-1">
+        <label class="text-[11px] font-bold text-slate-600 uppercase tracking-wider">Cátedra Dominio</label>
+        <input type="text" value="Plataformas Web" disabled class="w-full rounded-lg border border-slate-200 bg-slate-100 px-3 py-2 text-xs text-slate-500 cursor-not-allowed" />
+      </div>
+
+      <div class="col-span-6 md:col-span-2 flex items-end">
+        <button type="button" class="w-full btn-primary !py-2 !text-xs">
+          Guardar Ficha Académica
+        </button>
+      </div>
     </div>
   </article>
 

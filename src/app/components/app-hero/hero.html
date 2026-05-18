@@ -1,24 +1,27 @@
-<section class="hero">
-    <h1>{{ title() | uppercase }}</h1>
-    <p>{{ subtitle() }}</p>
+<section class="rounded-2xl bg-slate-50 border border-slate-200/60 p-8 shadow-2xs max-w-3xl mx-auto space-y-6">
+  
+  <header class="space-y-1">
+    <h1 class="text-2xl font-extrabold tracking-tight text-slate-900 md:text-3xl uppercase">
+      Componentes Standalone Reutilizables
+    </h1>
+    <p class="text-base font-medium text-slate-700">
+      Temas activos: <span class="font-semibold text-slate-900">{{ topics().length }}</span>
+    </p>
+  </header>
 
-    <button
-        type="button"
-        (click)="toggleMode()"
-    >Vista: {{ viewMode() }}</button>
+  <div>
+    <button 
+      type="button"
+      class="inline-flex items-center justify-center rounded-sm border border-slate-400 bg-linear-to-b from-white to-slate-100 px-2.5 py-1 text-xs font-normal text-slate-900 shadow-2xs hover:bg-slate-50 active:bg-slate-100 cursor-pointer"
+    >
+      Vista: lista
+    </button>
+  </div>
 
-    @switch (viewMode()) {
-    @case ('lista') {
-    <ul>
-        @for (item of topics(); track item) {
-        <li>{{ item }}</li>
-        } @empty {
-        <p>No hay temas registrados.</p>
-        }
-    </ul>
+  <ul class="list-disc list-inside pl-2 space-y-1 text-base font-medium text-slate-800">
+    @for (topic of topics(); track topic) {
+      <li>{{ topic }}</li>
     }
-    @case ('resumen') {
-    <p>Total de temas: <strong>{{ topics().length }}</strong></p>
-    }
-    }
+  </ul>
+
 </section>
