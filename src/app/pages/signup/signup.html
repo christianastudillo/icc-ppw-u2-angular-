@@ -1,0 +1,279 @@
+<div class="min-h-screen bg-slate-900 text-white p-10">
+
+  <div class="max-w-2xl mx-auto bg-slate-800 p-8 rounded-xl">
+
+    <h1 class="text-4xl font-bold mb-8">
+      Reactive Forms Angular
+    </h1>
+
+    <form
+      [formGroup]="signupForm"
+      (ngSubmit)="onSubmit()"
+      class="space-y-5"
+    >
+
+      <!-- NAME -->
+
+      <div>
+
+        <label class="block mb-2">
+          Nombre
+        </label>
+
+        <input
+          type="text"
+          formControlName="name"
+          class="w-full p-3 rounded bg-slate-700"
+        >
+
+        @if (formUtils.isValidField(signupForm, 'name')) {
+
+          <p class="text-red-400 mt-1">
+            {{ formUtils.getFieldError(signupForm, 'name') }}
+          </p>
+
+        }
+
+      </div>
+
+      <!-- EMAIL -->
+
+      <div>
+
+        <label class="block mb-2">
+          Email
+        </label>
+
+        <input
+          type="email"
+          formControlName="email"
+          class="w-full p-3 rounded bg-slate-700"
+        >
+
+        @if (signupForm.get('email')?.pending) {
+
+          <p class="text-yellow-400 mt-1">
+            Verificando email...
+          </p>
+
+        }
+
+        @if (formUtils.isValidField(signupForm, 'email')) {
+
+          <p class="text-red-400 mt-1">
+            {{ formUtils.getFieldError(signupForm, 'email') }}
+          </p>
+
+        }
+
+      </div>
+
+      <!-- PASSWORD -->
+
+      <div>
+
+        <label class="block mb-2">
+          Password
+        </label>
+
+        <input
+          type="password"
+          formControlName="password"
+          class="w-full p-3 rounded bg-slate-700"
+        >
+
+        @if (formUtils.isValidField(signupForm, 'password')) {
+
+          <p class="text-red-400 mt-1">
+            {{ formUtils.getFieldError(signupForm, 'password') }}
+          </p>
+
+        }
+
+      </div>
+
+      <!-- CONFIRM PASSWORD -->
+
+      <div>
+
+        <label class="block mb-2">
+          Confirmar Password
+        </label>
+
+        <input
+          type="password"
+          formControlName="confirmPassword"
+          class="w-full p-3 rounded bg-slate-700"
+        >
+
+        @if (formUtils.isValidField(signupForm, 'confirmPassword')) {
+
+          <p class="text-red-400 mt-1">
+            {{ formUtils.getFieldError(signupForm, 'confirmPassword') }}
+          </p>
+
+        }
+
+      </div>
+
+      <!-- PASSWORD MATCH -->
+
+      @if (
+        signupForm.hasError('passwordMismatch')
+        && signupForm.get('confirmPassword')?.touched
+      ) {
+
+        <p class="text-red-400">
+          Las contraseñas no coinciden
+        </p>
+
+      }
+
+      <!-- RADIO BUTTONS -->
+
+      <div>
+
+        <p class="mb-2 font-bold">
+          Rol
+        </p>
+
+        <label class="mr-4">
+
+          <input
+            type="radio"
+            value="frontend"
+            formControlName="role"
+          >
+
+          Frontend
+
+        </label>
+
+        <label class="mr-4">
+
+          <input
+            type="radio"
+            value="backend"
+            formControlName="role"
+          >
+
+          Backend
+
+        </label>
+
+        <label>
+
+          <input
+            type="radio"
+            value="fullstack"
+            formControlName="role"
+          >
+
+          Fullstack
+
+        </label>
+
+      </div>
+
+      <!-- SWITCH -->
+
+      <div class="flex items-center gap-3">
+
+        <label>
+          Notificaciones
+        </label>
+
+        <input
+          type="checkbox"
+          formControlName="notifications"
+        >
+
+      </div>
+
+      <!-- TERMS -->
+
+      <div>
+
+        <label class="flex items-center gap-2">
+
+          <input
+            type="checkbox"
+            formControlName="terms"
+          >
+
+          Acepto términos y condiciones
+
+        </label>
+
+        @if (formUtils.isValidField(signupForm, 'terms')) {
+
+          <p class="text-red-400 mt-1">
+            Debes aceptar los términos
+          </p>
+
+        }
+
+      </div>
+
+      <!-- FORM ARRAY -->
+
+      <div>
+
+        <div class="flex justify-between items-center mb-4">
+
+          <h2 class="text-xl font-bold">
+            Lenguajes
+          </h2>
+
+          <button
+            type="button"
+            (click)="addLanguage()"
+            class="bg-sky-600 px-4 py-2 rounded"
+          >
+            Agregar
+          </button>
+
+        </div>
+
+        <div formArrayName="languages">
+
+          @for (language of languages.controls; track $index) {
+
+            <div class="flex gap-2 mb-2">
+
+              <input
+                [formControlName]="$index"
+                class="w-full p-3 rounded bg-slate-700"
+              >
+
+              <button
+                type="button"
+                (click)="removeLanguage($index)"
+                class="bg-red-600 px-4 rounded"
+              >
+                X
+              </button>
+
+            </div>
+
+          }
+
+        </div>
+
+      </div>
+
+      <!-- SUBMIT -->
+
+      <button
+        type="submit"
+        [disabled]="signupForm.invalid || signupForm.pending"
+        class="w-full bg-sky-600 p-3 rounded font-bold disabled:bg-slate-500"
+      >
+        Registrarse
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
