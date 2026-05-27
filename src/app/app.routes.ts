@@ -1,62 +1,76 @@
 import { Routes } from '@angular/router';
 
 import { HomePage } from './features/home/pages/home-page/home-page';
+
 import { StudentsPage } from './features/students/pages/students-page/students-page';
 import { StudentDetailPage } from './features/students/pages/student-detail-page/student-detail-page';
-import { SignupComponent } from './pages/signup/signup';
-import { SignupPage } from './features/signup/pages/signup-page/signup-page';
-import { ProfilePage } from './features/profile/pages/profile-page/profile-page';
-import ProjectConfigPage from './features/project/pages/project-config-page';
 
 import { LayoutsPage } from './features/layouts/pages/layouts-page';
 
-export const routes: Routes = [
+import { SignupPage } from './features/signup/pages/signup-page/signup-page';
 
+import { ProfilePage } from './features/profile/pages/profile-page/profile-page';
+
+import ProjectConfigPage from './features/project/pages/project-config-page';
+import UiComponentsPage from './features/ui-components/pages/ui-components-page';
+
+import { SimpsonsPage } from './features/simpsons/pages/simpsons-page/simpsons-page';
+
+import { SimpsonDetailPage } from './features/simpsons/pages/simpson-detail-page/simpson-detail-page';
+
+export const routes: Routes = [
   {
     path: '',
-    component: HomePage
+    component: HomePage,
   },
 
   {
     path: 'students',
-    component: StudentsPage
+    component: StudentsPage,
   },
 
   {
     path: 'students/:id',
-    component: StudentDetailPage
+    component: StudentDetailPage,
   },
 
   {
     path: 'layouts',
-    component: LayoutsPage
+    component: LayoutsPage,
   },
 
   {
-    path: '',
-    component: SignupComponent
-  },
-  {
-    path: '',
-    redirectTo: 'signup',
-    pathMatch: 'full'
+    path: 'forms',
+    component: SignupPage,
   },
 
   {
-    path: 'signup',
-    component: SignupPage
+    path: 'profile',
+    component: ProfilePage,
   },
-  {
-      path: 'profile',
-      component: ProfilePage
-  },
+
   {
     path: 'project-config',
-    component: ProjectConfigPage
+    component: ProjectConfigPage,
   },
+
+  {
+    path: 'ui-components',
+    component: UiComponentsPage,
+  },
+
+  {
+    path: 'simpsons',
+    component: SimpsonsPage,
+  },
+
+  {
+    path: 'simpsons/:id',
+    component: SimpsonDetailPage,
+  },
+
   {
     path: '**',
-    redirectTo: ''
-  }
-
+    redirectTo: '',
+  },
 ];

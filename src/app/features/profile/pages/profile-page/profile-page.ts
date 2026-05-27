@@ -1,61 +1,54 @@
-import { Component, inject } from '@angular/core';
-
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import {
   FormBuilder,
   FormGroup,
+  FormsModule,
   ReactiveFormsModule,
   Validators
 } from '@angular/forms';
-
 import { FormUtils } from '../../../../shared/utils/form-utils';
 
 @Component({
   selector: 'app-profile-page',
-
   standalone: true,
-
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
-
   templateUrl: './profile-page.html',
 })
-
 export class ProfilePage {
 
-  private fb = inject(FormBuilder);
-
   formUtils = FormUtils;
+  myForm: FormGroup;
 
-  myForm: FormGroup = this.fb.group({
-
-    nombre: [
-      '',
-      [
-        Validators.required,
-        Validators.minLength(3)
+  constructor(private fb: FormBuilder) {
+    this.myForm = this.fb.group({
+      nombre: [
+        '',
+        [
+          Validators.required,
+          Validators.minLength(3)
+        ]
+      ],
+      edad: [
+        0,
+        [
+          Validators.required,
+          Validators.min(18)
+        ]
+      ],
+      correo: [
+        '',
+        [
+          Validators.required,
+          Validators.email
+        ]
       ]
-    ],
-
-    edad: [
-      0,
-      [
-        Validators.required,
-        Validators.min(18)
-      ]
-    ],
-
-    correo: [
-      '',
-      [
-        Validators.required,
-        Validators.email
-      ]
-    ]
-  });
+    });
+  }
 
   get nombre() {
     return this.myForm.get('nombre')!;
@@ -70,18 +63,13 @@ export class ProfilePage {
   }
 
   onSubmit(): void {
-
     if (this.myForm.invalid) {
-
       this.myForm.markAllAsTouched();
-
       return;
     }
 
     console.log(this.myForm.value);
-
     alert('Perfil guardado correctamente');
-
     this.myForm.reset();
   }
 }

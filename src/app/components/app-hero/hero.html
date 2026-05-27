@@ -1,27 +1,81 @@
-<section class="rounded-2xl bg-slate-50 border border-slate-200/60 p-8 shadow-2xs max-w-3xl mx-auto space-y-6">
-  
-  <header class="space-y-1">
-    <h1 class="text-2xl font-extrabold tracking-tight text-slate-900 md:text-3xl uppercase">
-      Componentes Standalone Reutilizables
-    </h1>
-    <p class="text-base font-medium text-slate-700">
-      Temas activos: <span class="font-semibold text-slate-900">{{ topics().length }}</span>
-    </p>
-  </header>
+<!-- HERO -->
+<section
+  class="relative overflow-hidden px-6 py-24 md:px-16 md:py-32"
+>
+  <!-- Glow decorativo -->
+  <div
+    class="absolute -left-32 -top-32 h-96 w-96 rounded-full bg-sky-400/20 blur-3xl"
+  ></div>
 
-  <div>
-    <button 
-      type="button"
-      class="inline-flex items-center justify-center rounded-sm border border-slate-400 bg-linear-to-b from-white to-slate-100 px-2.5 py-1 text-xs font-normal text-slate-900 shadow-2xs hover:bg-slate-50 active:bg-slate-100 cursor-pointer"
-    >
-      Vista: lista
-    </button>
+  <div
+    class="mx-auto flex max-w-7xl flex-col items-center gap-16 md:flex-row"
+  >
+
+    <!-- TEXTO -->
+    <div class="flex-1 space-y-6">
+
+      <div class="space-y-4">
+        <span
+          class="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600"
+        >
+          Disponible para nuevos proyectos
+        </span>
+
+        <h1
+          class="text-5xl font-black tracking-tight text-slate-900 md:text-7xl"
+        >
+          Alex Dev
+        </h1>
+
+        <p
+          class="text-2xl font-semibold text-slate-700 md:text-3xl"
+        >
+          Full Stack Developer
+        </p>
+
+        <p
+          class="max-w-xl text-base leading-7 text-slate-600 md:text-lg"
+        >
+          Building elegant solutions to complex problems.
+          Especialista en arquitecturas robustas y experiencias
+          digitales inmersivas.
+        </p>
+      </div>
+
+      <!-- BOTONES -->
+      <div class="flex flex-wrap gap-4">
+
+        <a
+          href="#work"
+          class="btn border-none bg-gradient-to-r from-sky-500 to-cyan-500 px-8 text-white shadow-lg transition hover:-translate-y-1 hover:shadow-cyan-300/40"
+        >
+          Ver proyectos
+        </a>
+
+        <a
+          href="#contact"
+          class="btn glass border border-white/20 bg-white/40 text-sky-700 backdrop-blur-md transition hover:-translate-y-1"
+        >
+          Contactarme
+        </a>
+
+      </div>
+    </div>
+
+    <!-- IMAGEN -->
+    <div class="relative flex-1">
+
+      <div
+        class="glass rounded-[2rem] border border-white/20 bg-white/30 p-3 shadow-2xl backdrop-blur-xl"
+      >
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrU8yAxIeiHjtxD9GqARGIOT17L1ECOkylZEIKqvaSFRV33WLJAHinPPR0ceJaX0XFdd_sEze_IYaXcg57kRo0p-u9nzxyJEAqKbKxQ-qzd1D7Q8RkjofPEGRfNsUUKMQRSGxV5N4GiFGpHbrT46TB8Y01enLIBz4PcXXlSQ9_Kf1JCW420rjbvO75dg4thZm-NgKlWyMpWvj2ViqsymBtHvukL0nFm-jk1cKJuwmb5lIdbdS_vptQd8rO4DhsNckOuE0TtnKYUhqe"
+          alt="Alex Dev Profile"
+          class="h-[350px] w-full rounded-[1.5rem] object-cover grayscale transition duration-700 hover:grayscale-0 md:h-[500px]"
+        />
+      </div>
+
+    </div>
+
   </div>
-
-  <ul class="list-disc list-inside pl-2 space-y-1 text-base font-medium text-slate-800">
-    @for (topic of topics(); track topic) {
-      <li>{{ topic }}</li>
-    }
-  </ul>
-
 </section>
