@@ -55,6 +55,38 @@
                 >
                     {{ characterResource.value()!.status || 'Desconocido' }}
                 </span>
+                    @if (authService.currentUser()) {
+
+                        <button
+                            class="btn btn-outline btn-sm"
+                            [class.btn-warning]="isFavorite()"
+                            (click)="toggleFavorite()"
+                        >
+
+                            @if (isFavorite()) {
+
+                            ★ Guardado en favoritos
+
+                            } @else {
+
+                            ☆ Agregar a favoritos
+
+                            }
+
+                        </button>
+
+                        } @else {
+
+                        <a
+                            class="btn btn-ghost btn-sm"
+                            routerLink="/auth"
+                        >
+
+                            Inicia sesión para guardar favoritos
+
+                        </a>
+
+        }
             </div>
         </div>
     </article>

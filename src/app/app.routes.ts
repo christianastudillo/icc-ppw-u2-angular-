@@ -18,6 +18,8 @@ import { SimpsonsPage } from './features/simpsons/pages/simpsons-page/simpsons-p
 
 import { SimpsonDetailPage } from './features/simpsons/pages/simpson-detail-page/simpson-detail-page';
 
+import { AuthPage } from './features/auth/pages/auth-page/auth-page';
+
 export const routes: Routes = [
   {
     path: '',
@@ -67,6 +69,10 @@ export const routes: Routes = [
   {
     path: 'simpsons/:id',
     component: SimpsonDetailPage,
+  },
+  {
+    path: 'auth',
+    component: AuthPage,
   },
 
   {
