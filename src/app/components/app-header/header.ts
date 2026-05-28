@@ -31,13 +31,8 @@ import { AuthService } from '../../core/services/auth';
 
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
+
 export class AppHeaderComponent {
-
-  private authService = inject(AuthService);
-
-  private router = inject(Router);
-
-  currentUser = this.authService.currentUser;
 
   readonly brand = signal('PPW Angular 21');
 
@@ -56,6 +51,13 @@ export class AppHeaderComponent {
     'Binding',
   ]);
 
+  private authService = inject(AuthService);
+
+  private router = inject(Router);
+
+  // Signal de usuario actual
+  currentUser = this.authService.currentUser;
+
   toggleInfo(): void {
     this.showInfo.update((value) => !value);
   }
@@ -68,13 +70,11 @@ export class AppHeaderComponent {
     this.brand.set('PPW Angular 21');
   }
 
-  logout(): void {
-
+  logout() {
     this.authService.logout().subscribe(() => {
 
+      // Redireccion despues de logout
       this.router.navigate(['/auth']);
-
     });
-
   }
 }

@@ -73,4 +73,19 @@ export class AuthPage {
       },
     });
   }
+  loginGoogle() {
+    this.errorMessage.set(null);
+
+    this.authService.loginWithGoogle().subscribe({
+      next: () => {
+        this.router.navigate(['/']);
+      },
+
+      error: () => {
+        this.errorMessage.set(
+          'No se pudo iniciar sesion con Google.'
+        );
+      },
+    });
+  }
 }
